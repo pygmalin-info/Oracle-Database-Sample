@@ -1,0 +1,11 @@
+name: oracle
+
+services:
+  oracle:
+    image: container-registry.oracle.com/database/free:latest
+    container_name: oracle
+    environment:
+      - ORACLE_PDB=mypdb
+      - ORACLE_PWD=password
+    ports:
+      - 1521:1521
