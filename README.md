@@ -9,8 +9,8 @@
 1. リポジトリをクローンします。
 
 ```bash
-git clone git@github.com:pygmalin-info/Oracle-Sample.git
-cd Oracle-Sample
+git clone git@github.com:pygmalin-info/Oracle-Database-Sample.git
+cd Oracle-Database-Sample
 ```
 
 2. Oracle コンテナを起動します。
@@ -27,7 +27,7 @@ docker compose up -d
 docker compose exec oracle bash
 ```
 
-次に、コンテナ内で以下のコマンドを実行して Oracle にログインします。
+次に、コンテナ内で以下の sqlplus コマンドを実行してデータベースにログインします。
 
 ```bash
 sqlplus sys/password@localhost:1521/FREE as sysdba
