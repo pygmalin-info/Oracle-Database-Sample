@@ -5,8 +5,8 @@ services:
     image: container-registry.oracle.com/database/free:latest
     container_name: oracle
     environment:
-      - ORACLE_PDB=mypdb
-      - ORACLE_PWD=password
+      - ORACLE_PDB=mypdb # Pluggable Database (PDB) のサービス名を設定
+      - ORACLE_PWD=password # SYS, SYSTEM, PDBADMIN ユーザーのパスワードを設定
     ports:
       - 1521:1521
     volumes:
