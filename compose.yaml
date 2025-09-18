@@ -9,3 +9,8 @@ services:
       - ORACLE_PWD=password
     ports:
       - 1521:1521
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+
+volumes:
+  oracle_data:
