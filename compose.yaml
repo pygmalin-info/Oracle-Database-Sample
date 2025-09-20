@@ -2,15 +2,15 @@ name: oracle
 
 services:
   oracle:
-    image: container-registry.oracle.com/database/free:latest
+    image: gvenzl/oracle-free:latest # Oracle Database Free の公式イメージ
     container_name: oracle
-    environment:
-      - ORACLE_PDB=mypdb # Pluggable Database (PDB) のサービス名を設定
-      - ORACLE_PWD=password # SYS, SYSTEM, PDBADMIN ユーザーのパスワードを設定
     ports:
-      - 1521:1521
+      - "1521:1521" # Oracle 接続用
+    environment:
+      ORACLE_PASSWORD: oracle # 管理者パスワード
+      ORACLE_DATABASE: MYPDB
     volumes:
-      - oracle_data:/opt/oracle/oradata
+      - oracle-data:/opt/oracle/oradata
 
 volumes:
-  oracle_data:
+  oracle-data:
