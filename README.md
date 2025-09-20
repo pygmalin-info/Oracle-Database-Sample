@@ -30,7 +30,7 @@ docker compose exec oracle bash
 次に、コンテナ内で以下の sqlplus コマンドを実行してデータベースにログインします。
 
 ```bash
-sqlplus sys/password@localhost:1521/FREE as sysdba
+sqlplus sys/oracle@localhost:1521/FREE as sysdba
 ```
 
 4. 終了する場合（コンテナの停止・削除）
@@ -40,3 +40,9 @@ docker compose down
 ```
 
 作業が終わりましたら、コンテナの停止・削除もお忘れなく。
+
+## 使用する docker イメージ
+
+`gvenzl/oracle-free`
+
+https://hub.docker.com/r/gvenzl/oracle-free
