@@ -8,7 +8,6 @@ services:
       - "1521:1521" # Oracle 接続用
     environment:
       ORACLE_PASSWORD: oracle # 管理者パスワード
-      ORACLE_DATABASE: MYPDB
     volumes:
       - oracle-data:/opt/oracle/oradata
 
